@@ -191,9 +191,8 @@ qplot(Platform, Global_Sales, colour=NA_Sales, data=data4, geom=c('point', 'jitt
 # 4. Observations and insights
 
 ## Your observations and insights here ......
-
-
-
+# Sales data contains 352 games, 10 platforms and 12 genres. 
+# Global sales are 5.335 million, while the EU mean sales are 1.644 million.
 
 ###############################################################################
 ###############################################################################
@@ -594,7 +593,14 @@ ggplot(data7, aes(x=sum_NA_Sales, y=sum_EU_Sales)) +
 
 # 4. Observations and insights
 # Your observations and insights here...
-
+    # data in all our sales figures is not normally distributed. With 
+    # Shapiro-Wilk showing p values of 2.2e-16 on all sales data. We can also see
+    # that the data is leptokurtic with a very high positive skewness. This means 
+    # data is not normally distributed and is very skewed. 
+    # The correlation between the sales data there is a positive
+    # correlation between all the sales data. This means that as one sales figure increases the
+    # other sales figures will also increase. The highest correclation is between NA_Sales and
+    # Global_Sales of 0.93. 
 
 ###############################################################################
 ###############################################################################
@@ -747,14 +753,6 @@ SSE_model_all_Sales
 # 4. Predictions based on given values
 # Compare with observed values for a number of records.
 
-# 4. Predict global sales based on provided values. Compare your prediction to
-#      the observed value(s).
-##  - NA_Sales_sum of 34.02 and EU_Sales_sum of 23.80.
-##  - NA_Sales_sum of 3.93 and EU_Sales_sum of 1.56.
-##  - NA_Sales_sum of 2.73 and EU_Sales_sum of 0.65.
-##  - NA_Sales_sum of 2.26 and EU_Sales_sum of 0.97.
-##  - NA_Sales_sum of 22.08 and EU_Sales_sum of 0.52.
-
 str(data4)
 
 head(data4)
@@ -787,10 +785,6 @@ prediction
 # 5. Observations and insights
 # Your observations and insights here...
 
-# Intercept at points 5.63199, 3.36063 and 11.50592 for NA_Sales, EU_Sales and Global_Sales respectively.
-# t-value of -10.18, -9.221 and -11.23 respectively mean estimate of slope coefficient is -10.18, -9.221 and -11.23
-# standard erros away from 0. 
-
 # Very high 431.205 = SSE_model_all_Sales is a poor fit.
 # The closer the SSE is to 0, the better the fit.
 
@@ -800,8 +794,8 @@ prediction
 
 # Looking at correlation we can see that the highest correlation 
 # in our data is between North America Sales and Global Sales 
-# 93.49% followed by EU and Global Sales of 87.75% with the least being EU and 
-# North American Sales of 70.55%.
+# 93% followed by EU and Global Sales of 87% with the least being EU and 
+# North American Sales of 70%.
 
 # predicted values are very close to actual values. Model is working well.
 ###############################################################################
