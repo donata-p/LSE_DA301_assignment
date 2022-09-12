@@ -1,4 +1,13 @@
-## LSE Data Analytics Online Career Accelerator 
+
+
+
+################################################################################
+# DONATA POLLOCK's GITHUB REPOSITORY:
+# https://github.com/donata-p/LSE_DA301_assignment
+###############################################################################
+
+
+# LSE Data Analytics Online Career Accelerator 
 
 # DA301:  Advanced Analytics for Organisational Impact
 
@@ -174,7 +183,8 @@ qplot(NA_Sales, bins=10, data=data4)
 qplot(EU_Sales, bins=10, data=data4)
 qplot(Global_Sales, bins=10, data=data4)
 
-qplot(Platform, data=data4)
+# sales perfomance per Platform
+qplot(Platform, data=data4, colour=I('green'))
 
 ## 5c) Boxplots
 # Create boxplots.
@@ -192,7 +202,7 @@ qplot(Platform, Global_Sales, colour=NA_Sales, data=data4, geom=c('point', 'jitt
 
 ## Your observations and insights here ......
 # Sales data contains 352 games, 10 platforms and 12 genres. 
-# Global sales are 5.335 million, while the EU mean sales are 1.644 million.
+# Global sales are 5.349 million, while the EU and NA mean sales are 1.6507 million and 2.519 million respectively.
 
 ###############################################################################
 ###############################################################################
